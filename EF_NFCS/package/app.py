@@ -87,7 +87,7 @@ def download():
     filename=image+'-'+tag+'.tgz'
     builder=EnvironBuilder()
     environ=builder.get_environ()
-    iodata=GeneratorBytesIO(img.save())
+    iodata=GeneratorBytesIO(img.save(named=Ture))
     compressed = GZIPCompressedStream(iodata, compression_level=7)
     file_send=wrap_file(environ=environ,file=compressed)
 
