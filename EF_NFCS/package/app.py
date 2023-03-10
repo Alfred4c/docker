@@ -39,6 +39,8 @@ def test():
     pattern = re.compile(r'\S+')
     list1= pattern.findall(s)
     images_temp = list1[6:]
+    while('About' in images_temp):
+        images_temp.remove('About')
     length=len(images_temp)
     images=[]
     i=0
