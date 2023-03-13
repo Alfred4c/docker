@@ -30,8 +30,8 @@ let save=function (id)
     var btn=document.getElementById(id)
     var val1=btn.value
 
-
-    var url="http://10.0.10.141:5004/save/"+val1
+    var origin = window.location.origin
+    var url=origin+'/save/'+val1
     var httpRequest =new XMLHttpRequest();
     httpRequest.open('GET',url,true)
     httpRequest.send()
@@ -41,7 +41,8 @@ let download=function (id)
 {
     var btn=document.getElementById(id)
     var val1=btn.value
-    var url="http://10.0.10.141:5004/download/"+val1
+    var origin=window.location.origin
+    var url=origin+'/download/'+val1
     window.open(url,'_blank')
 }
 
