@@ -3,7 +3,6 @@ import os
 import re
 
 import docker
-import requests
 from flask import Flask, Response, render_template, request
 from gzip_stream import GZIPCompressedStream
 from werkzeug.test import EnvironBuilder
@@ -118,5 +117,3 @@ def download():
 
 if __name__ == "__main__":
     app.run(port=5000, host="0.0.0.0")
-
-
